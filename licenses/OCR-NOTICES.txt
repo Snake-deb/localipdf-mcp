@@ -1,0 +1,45 @@
+Tesseract runtime assets are copied without modification from pinned npm packages.
+
+Tesseract.js 7.0.0 (Apache-2.0)
+https://github.com/naptha/tesseract.js
+See tesseract-js-Apache-2.0.txt and tesseract-worker-dependencies.txt.
+
+Tesseract.js-core (version pinned by package-lock.json; Apache-2.0)
+https://github.com/naptha/tesseract.js-core
+Includes Tesseract OCR and Leptonica.
+See tesseract-core-Apache-2.0.txt and leptonica-BSD.txt.
+
+English, Spanish, French, German, Tamil and Hindi traineddata, 4.0.0_best_int
+@tesseract.js-data/eng, /spa, /fra, /deu, /tam and /hin, each pinned to 1.0.0
+https://github.com/naptha/tessdata
+The language-data repository distributes traineddata under Apache-2.0.
+The npm packaging metadata separately declares MIT.
+See tesseract-english-model-Apache-2.0.txt.
+
+Orientation/script detection traineddata, @tesseract.js-data/osd 1.0.0, 4.0.0
+https://github.com/naptha/tessdata
+Distributed by the same language-data repository under Apache-2.0;
+the npm packaging metadata separately declares MIT.
+See tesseract-english-model-Apache-2.0.txt for the repository's license.
+
+The supplied worker's notices also identify regenerator-runtime and zlib.js
+(MIT), buffer (MIT), and ieee754 (BSD-3-Clause).
+
+Noto Sans Tamil and Noto Sans Devanagari Regular, unmodified TrueType fonts.
+https://github.com/notofonts/noto-fonts
+SIL Open Font License 1.1; see NotoIndic-OFL.txt.
+
+Optional English numeric second reader:
+PaddleOCR.js 0.4.2 and PP-OCRv5_mobile_det / en_PP-OCRv5_mobile_rec models
+https://github.com/PaddlePaddle/PaddleOCR (Apache-2.0).
+Official model archives are pinned by SHA-256 in src/ocr/neural-assets.json.
+See PaddleOCR-Apache-2.0.txt. Models are unmodified. The worker's generated
+Emscripten function wrappers are replaced with ordinary closures for strict
+CSP compatibility; see scripts/neural-worker-csp.mjs and Emscripten-MIT.txt.
+
+The official worker embeds ONNX Runtime Web 1.24.3 (MIT), OpenCV.js
+(Apache-2.0), js-yaml (MIT), Clipper (Boost-1.0) and JSBN attribution.
+See ONNX-Runtime-MIT.txt, ONNX-Runtime-ThirdPartyNotices.txt,
+OpenCV-JS-license.txt, js-yaml-MIT.txt, Boost-1.0.txt,
+clipper-attribution.txt and jsbn-license.txt. Bundled source notices remain
+in the worker. No Scribe.js or Ghostscript code is included.

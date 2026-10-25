@@ -1,0 +1,22 @@
+Eigen source supplied for the MPL-2.0 component named in ONNX Runtime 1.24.3.
+
+Pinned by https://github.com/microsoft/onnxruntime/blob/v1.24.3/cmake/deps.txt
+Commit: 1d8b82b0740839c0de7f1242a3585e3390ff5f33
+
+Archive is the unmodified upstream source, with its original file-level copyright and licence notices. ONNX Runtime applies the two supplied patches in order with patch -p1. No further Eigen changes are made by localipdf.
+
+Build reference: https://github.com/microsoft/onnxruntime/blob/v1.24.3/cmake/external/eigen.cmake
+The full upstream source tree includes optional modules with their own terms; supplying it does not mean every optional module is linked into the browser runtime.
+
+eigen-1d8b82b.zip
+https://codeload.github.com/eigen-mirror/eigen/zip/1d8b82b0740839c0de7f1242a3585e3390ff5f33
+SHA-256: 6a60d76351f97132669daeeb721d6bf14b008101883ad2d687a3201c5c461eb0
+
+s390x-build.patch
+https://raw.githubusercontent.com/microsoft/onnxruntime/v1.24.3/cmake/patches/eigen/s390x-build.patch
+SHA-256: 6d41f4504f665bc591336c668a1aa16ffc5e0f02fe9c2f9c46c6f5660b54c849
+
+s390x-build-werror.patch
+https://raw.githubusercontent.com/microsoft/onnxruntime/v1.24.3/cmake/patches/eigen/s390x-build-werror.patch
+SHA-256: a1a7b0ca8382cb00542587b6bc725f59abd59ad5bb491825f7876ad6e344ef0b
+
