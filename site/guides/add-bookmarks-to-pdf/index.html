@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#016a71"/><meta name="description" content="Add PDF bookmarks for chapters, sections and attachments. Build a clear hierarchy, choose the right destination pages, and check the saved navigation."/><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.googletagmanager.com https://*.google-analytics.com; font-src 'self' blob: data:; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"/><link rel="manifest" href="/manifest.webmanifest"/><link rel="icon" href="/favicon.svg"/><title>How to add bookmarks to a PDF</title><!-- Google tag (gtag.js) --><script src="/google-analytics.js"></script>  <script type="module" crossorigin src="/assets/index-CWanKoBM.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-Dd_uD5pT.js">
+  <link rel="modulepreload" crossorigin href="/assets/limits-CoiHy9K8.js">
+  <link rel="modulepreload" crossorigin href="/assets/model-9qzk93DE.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-Du-X-U0l.css">
+<meta name="robots" content="index, follow"/><link rel="canonical" href="https://localipdf.com/guides/add-bookmarks-to-pdf/"/><meta property="og:url" content="https://localipdf.com/guides/add-bookmarks-to-pdf/"/><meta property="og:image" content="https://localipdf.com/brand/social-card.png"/><meta name="twitter:image" content="https://localipdf.com/brand/social-card.png"/><meta property="og:type" content="website"/><meta property="og:site_name" content="localipdf"/><meta property="og:locale" content="en_US"/><meta name="twitter:card" content="summary_large_image"/><meta property="og:title" content="How to add bookmarks to a PDF"/><meta property="og:description" content="Add PDF bookmarks for chapters, sections and attachments. Build a clear hierarchy, choose the right destination pages, and check the saved navigation."/><meta name="twitter:title" content="How to add bookmarks to a PDF"/><meta name="twitter:description" content="Add PDF bookmarks for chapters, sections and attachments. Build a clear hierarchy, choose the right destination pages, and check the saved navigation."/><meta property="og:image:alt" content="localipdf — Free PDF tools. Your documents stay on your device."/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><script id="page-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to add bookmarks to a PDF","description":"Add PDF bookmarks for chapters, sections and attachments. Build a clear hierarchy, choose the right destination pages, and check the saved navigation.","datePublished":"2026-10-24","mainEntityOfPage":"https://localipdf.com/guides/add-bookmarks-to-pdf/","inLanguage":"en","author":{"@type":"Organization","name":"localipdf","url":"https://localipdf.com/about/"},"publisher":{"@id":"https://localipdf.com/#organization"}}</script></head><body><div id="root"><main class="container prose"><nav aria-label="Breadcrumb"><a href="/">PDF tools</a> / <a href="/guides/">PDF guides</a></nav><h1>How to add bookmarks to a PDF</h1><p>Published <time datetime="2026-10-24">2026-10-24</time></p><div class="article-body"><p>To add bookmarks to a PDF, open it in PDF Bookmarks, add an entry, and give it a title and destination page. Group related entries under chapter headings, then save a new copy. Open the saved PDF in a reader with a bookmarks panel and test where each entry leads.</p>
+<h2>Plan the navigation before adding entries</h2>
+<p>Choose labels that help someone find a section without reading every page. Use the document&#39;s actual chapter names where possible. A short report may need only a few entries; a report with supporting documents may benefit from nested groups.</p>
+<p>W3C&#39;s <a href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF2">guidance on PDF bookmarks</a> describes using an outline to help people locate sections in long documents. It also recommends checking that entries lead to the intended content. Adding bookmarks alone does not establish that the rest of a PDF is accessible.</p>
+<p>Finish any planned page rearrangement in <a href="/tools/organize-pdf/">Organize PDF</a> first. Count the actual pages from the start of the file, including the cover and any introduction. A printed page number can differ from that position: chapter page 1 might be the third page in the file. Use the destination preview to confirm the section you mean.</p>
+<h2>Add and arrange the bookmarks</h2>
+<ol>
+<li>Open <a href="/tools/edit-bookmarks/">PDF Bookmarks</a> and choose your PDF. The file is processed on your device. Keep the original separately, especially if it already has useful navigation.</li>
+<li>Select Add bookmark. Enter a clear Bookmark title, such as Project details, rather than leaving New bookmark as the name.</li>
+<li>Under Destination, choose Go to a page. Set Destination page to the page&#39;s position in the file, starting at 1. Check the preview below the controls.</li>
+<li>Under Place under, choose Top level for a main chapter. To create a subsection, select its parent by title. Use Move up or Move down to reorder entries under the same parent; this changes the bookmark list, not the document&#39;s pages.</li>
+<li>For a group that only organizes other entries, choose Heading only under Destination, then add its children. Show children when the PDF opens controls the group&#39;s initial expansion in compatible readers; it does not guarantee that every reader will open its bookmarks panel automatically.</li>
+<li>Review the complete list. Select Save bookmarks, then Download PDF. Reopen the saved file, show its bookmarks or outline panel, and click every entry that has a page destination.</li>
+</ol>
+<p>If the file already has a supported destination that is not a local page, the editor may show Keep existing link. Leave that selected when you want to retain the existing action. Changing it to a page destination replaces that link.</p>
+<h2>A worked five-page outline</h2>
+<p>For an invented five-page report, you could use this structure. Parent names refer to entries you have already added.</p>
+<table>
+<thead>
+<tr>
+<th>Bookmark title</th>
+<th>Destination</th>
+<th>Place under</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Overview</td>
+<td>Page 1</td>
+<td>Top level</td>
+</tr>
+<tr>
+<td>Project details</td>
+<td>Page 3</td>
+<td>Top level</td>
+</tr>
+<tr>
+<td>Budget</td>
+<td>Page 4</td>
+<td>Project details</td>
+</tr>
+<tr>
+<td>Attachments</td>
+<td>Heading only</td>
+<td>Top level</td>
+</tr>
+<tr>
+<td>Receipt</td>
+<td>Page 5</td>
+<td>Attachments</td>
+</tr>
+</tbody></table>
+<p>Here, Attachments is a group label, so clicking it need not open a page. Receipt opens the fifth page. Budget belongs beneath Project details and should still lead to the fourth page even if you move that bookmark up or down in the list.</p>
+<p>Give each attachment its own label, such as Receipt or Site plan. Match it to the page heading so readers can confirm where they have landed.</p>
+<h2>Use heading suggestions as a starting point</h2>
+<p>Suggest headings looks for headings in the PDF&#39;s text and adds suggested entries for review. It supports documents of up to 200 pages. It can miss headings or include text you do not want in the outline, so check each suggested title and page before saving.</p>
+<p>A scanned page may show a heading as a picture, with no text for this feature to read. Add that bookmark manually if suggestions do not find it. You can build the entire outline by hand without using suggestions.</p>
+<h2>Check the saved result</h2>
+<p>Open the downloaded copy in the reader your recipient uses when possible. Expand the groups, test the first and last entries, and inspect each subsection&#39;s destination. Confirm that page content and page order still match the original.</p>
+<p>If you change, remove or duplicate pages later, check the bookmarks again. A destination can be omitted when its page is removed, and a heading may remain to hold retained children. Do not assume a previous navigation check still covers a newly arranged file.</p>
+<p>Deleting a parent in the bookmark editor also deletes its children. Use Undo to restore a mistaken deletion before saving. If you need to correct a downloaded result, reopen it or return to your original; a later browser refresh clears the current editing session.</p>
+<p>For a digitally signed file, keep the signed original. Saving bookmark changes creates an edited copy whose original digital signature will no longer be valid. The tool requires confirmation before that export; a visible signature mark does not prove that the edited copy is still verified.</p>
+<h2>Common situations</h2>
+<table>
+<thead>
+<tr>
+<th>What you see</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The bookmark opens the cover instead of chapter 1</td>
+<td>Use the page&#39;s position in the file, including front matter, and inspect the preview.</td>
+</tr>
+<tr>
+<td>A group does not jump to a page</td>
+<td>It may use Heading only. Choose Go to a page if the group itself should open a section.</td>
+</tr>
+<tr>
+<td>Move up does not move an entry out of a group</td>
+<td>Those buttons reorder siblings. Change Place under to choose a different parent or Top level.</td>
+</tr>
+<tr>
+<td>The saved PDF seems to have no bookmarks</td>
+<td>Open the reader&#39;s bookmarks or outline panel. Reader controls and initial display vary.</td>
+</tr>
+<tr>
+<td>A destination outside the document is rejected</td>
+<td>Choose a page from 1 through the file&#39;s page count. A printed chapter number is not always the same number.</td>
+</tr>
+</tbody></table>
+<h2>Questions</h2>
+<h3>Are PDF bookmarks the same as a web browser bookmark?</h3>
+<p>No. These entries are stored inside the saved PDF and point to document destinations or supported existing links. A browser bookmark saves a web address in your browser. Sharing the PDF shares its saved outline with compatible readers.</p>
+<h3>Can one bookmark jump to two different pages?</h3>
+<p>A page bookmark has one destination. Create separate entries for different sections, or put several entries under a heading so the reader can choose the section they need.</p>
+<h3>Will my bookmark list appear when I print the PDF?</h3>
+<p>The reader&#39;s bookmark panel is separate from the document&#39;s visible pages. This tool does not insert a printed contents page. If your recipient needs navigation on paper, include a contents page in the document itself.</p>
+<h3>Does changing a bookmark title rename text on the PDF page?</h3>
+<p>No. It changes the navigation label in the saved outline. The page heading and body text remain as they were, so keep the bookmark wording consistent with the section it opens.</p>
+</div></main><footer><p><a href="/glossary/">Glossary</a> · <a href="/guides/">Guides</a> · <a href="/licenses/">Open-source licences</a> · <a href="/about/">About</a> · <a href="/terms/">Terms</a> · <a href="/faq/">FAQ</a> · <a href="/claude/">Use in Claude &amp; Codex</a> · <a href="/verify/">Verify it yourself</a></p><p><a href="/">All PDF tools</a> · <a href="/privacy/">Privacy policy</a> · <a href="mailto:support@localipdf.com">support@localipdf.com</a></p><nav aria-label="PDF tools"><p><a href="/tools/compress-pdf/">Compress PDF</a> · <a href="/tools/merge-pdf/">Merge PDF</a> · <a href="/tools/split-pdf/">Split PDF</a> · <a href="/tools/jpg-to-pdf/">Images to PDF</a> · <a href="/tools/png-to-pdf/">PNG to PDF</a> · <a href="/tools/pdf-to-jpg/">PDF to images</a> · <a href="/tools/pdf-to-png/">PDF to PNG</a> · <a href="/tools/pdf-to-word/">PDF to Word</a> · <a href="/tools/word-to-pdf/">Word to PDF</a> · <a href="/tools/pdf-to-excel/">PDF to Excel</a> · <a href="/tools/unlock-pdf/">Unlock PDF</a> · <a href="/tools/protect-pdf/">Protect PDF</a> · <a href="/tools/sign-pdf/">Sign PDF</a> · <a href="/tools/edit-pdf/">Edit PDF</a> · <a href="/tools/ocr-pdf/">OCR PDF</a> · <a href="/tools/scan-to-pdf/">Scan to PDF</a> · <a href="/tools/remove-pages/">Remove pages</a> · <a href="/tools/rotate-pdf/">Rotate PDF</a> · <a href="/tools/compress-pdf-to-200kb/">Compress PDF to 200 KB</a></p></nav></footer></div></body></html>

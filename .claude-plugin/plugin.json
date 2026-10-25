@@ -1,0 +1,14 @@
+{
+  "name": "localipdf",
+  "displayName": "localipdf PDF tools",
+  "description": "Compress, merge, split, convert, protect and redact PDFs on your own computer. PDFs are processed in a local browser profile that cannot reach other websites.",
+  "version": "0.1.1",
+  "author": {
+    "name": "localipdf",
+    "email": "support@localipdf.com",
+    "url": "https://localipdf.com"
+  },
+  "homepage": "https://localipdf.com/claude/",
+  "repository": "https://github.com/Snake-deb/localipdf-mcp",
+  "keywords": ["pdf", "compress", "merge", "split", "convert", "redact", "offline"]
+}

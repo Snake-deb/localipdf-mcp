@@ -1,0 +1,1 @@
+var e={Title:`Title`,Author:`Author`,Subject:`Subject`,Keywords:`Keywords`,Creator:`Created with`,Producer:`PDF software`,CreationDate:`Date created`,ModDate:`Date modified`};export{e as t};

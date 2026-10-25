@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#016a71"/><meta name="description" content="Connect localipdf to Codex to merge, split and convert local PDFs. Follow setup steps, test a result, understand privacy limits, and update the connection."/><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.googletagmanager.com https://*.google-analytics.com; font-src 'self' blob: data:; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"/><link rel="manifest" href="/manifest.webmanifest"/><link rel="icon" href="/favicon.svg"/><title>How to use localipdf PDF tools in Codex</title><!-- Google tag (gtag.js) --><script src="/google-analytics.js"></script>  <script type="module" crossorigin src="/assets/index-CWanKoBM.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-Dd_uD5pT.js">
+  <link rel="modulepreload" crossorigin href="/assets/limits-CoiHy9K8.js">
+  <link rel="modulepreload" crossorigin href="/assets/model-9qzk93DE.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-Du-X-U0l.css">
+<meta name="robots" content="index, follow"/><link rel="canonical" href="https://localipdf.com/guides/use-localipdf-with-codex/"/><meta property="og:url" content="https://localipdf.com/guides/use-localipdf-with-codex/"/><meta property="og:image" content="https://localipdf.com/brand/social-card.png"/><meta name="twitter:image" content="https://localipdf.com/brand/social-card.png"/><meta property="og:type" content="website"/><meta property="og:site_name" content="localipdf"/><meta property="og:locale" content="en_US"/><meta name="twitter:card" content="summary_large_image"/><meta property="og:title" content="How to use localipdf PDF tools in Codex"/><meta property="og:description" content="Connect localipdf to Codex to merge, split and convert local PDFs. Follow setup steps, test a result, understand privacy limits, and update the connection."/><meta name="twitter:title" content="How to use localipdf PDF tools in Codex"/><meta name="twitter:description" content="Connect localipdf to Codex to merge, split and convert local PDFs. Follow setup steps, test a result, understand privacy limits, and update the connection."/><meta property="og:image:alt" content="localipdf — Free PDF tools. Your documents stay on your device."/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><script id="page-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to use localipdf PDF tools in Codex","description":"Connect localipdf to Codex to merge, split and convert local PDFs. Follow setup steps, test a result, understand privacy limits, and update the connection.","datePublished":"2026-10-20","mainEntityOfPage":"https://localipdf.com/guides/use-localipdf-with-codex/","inLanguage":"en","author":{"@type":"Organization","name":"localipdf","url":"https://localipdf.com/about/"},"publisher":{"@id":"https://localipdf.com/#organization"}}</script></head><body><div id="root"><main class="container prose"><nav aria-label="Breadcrumb"><a href="/">PDF tools</a> / <a href="/guides/">PDF guides</a></nav><h1>How to use localipdf PDF tools in Codex</h1><p>Published <time datetime="2026-10-20">2026-10-20</time></p><div class="article-body"><p>You can ask Codex to work with local PDFs through localipdf&#39;s MCP connection. MCP lets an AI assistant discover and call tools. This package uses the same PDF engine as the website and the same server as the <a href="/claude/">Claude Desktop integration</a>. You do not need a second converter.</p>
+<h2>Before you start</h2>
+<p>Use a local Codex installation, Node.js 20 or newer, and an installed Chrome, Edge, Chromium or Brave browser. This package needs a computer that can run a local browser; it is not a hosted connector for ChatGPT in a web browser.</p>
+<p>No localipdf API key is required. Your normal Codex account and usage arrangements still apply. Start with two disposable PDFs so you can check the connection without sharing sensitive material.</p>
+<h2>Download the tools</h2>
+<ol>
+<li><a href="https://localipdf.com/downloads/localipdf-mcp.zip">Download the localipdf MCP package</a>.</li>
+<li>Extract it into a permanent folder, such as a folder named <code>localipdf-mcp</code>.</li>
+<li>Keep <code>server.mjs</code>, <code>driver.js</code>, <code>tools.json</code>, <code>manifest.json</code>, <code>README.md</code> and the <code>site</code> folder together. Moving only the server file will break the connection.</li>
+</ol>
+<p>If you already have the extracted Claude package, you can reuse that folder. Both downloads contain the same server. Codex does not need the Claude extension installer.</p>
+<h2>Add it to Codex</h2>
+<p>Check your installed client&#39;s commands with <code>codex mcp --help</code>. For a CLI installation, replace the example path below with the full path to your extracted server:</p>
+<pre><code class="language-sh">codex mcp add localipdf -- node &quot;/absolute/path/localipdf-mcp/server.mjs&quot;
+</code></pre>
+<p>If <code>localipdf</code> is already configured, inspect that entry instead of adding another. If the desktop app cannot find Node, use the full path to the Node executable in place of <code>node</code>.</p>
+<p>For longer conversions, add the following setting inside the existing <code>[mcp_servers.localipdf]</code> section of <code>~/.codex/config.toml</code>:</p>
+<pre><code class="language-toml">tool_timeout_sec = 960
+</code></pre>
+<p>This gives the connection time to receive the server&#39;s own 15-minute timeout response. It does not make a conversion faster. Keep other server settings intact.</p>
+<p>In the desktop app&#39;s MCP settings, save the connection and use the available restart control. For CLI, start a fresh session and use <code>/mcp</code> to inspect connected servers. The exact settings labels can vary by client version. See <a href="https://learn.chatgpt.com/docs/extend/mcp?surface=cli">OpenAI&#39;s MCP setup documentation</a> for its current configuration and reload steps.</p>
+<h2>Confirm the connection works</h2>
+<p>First ask:</p>
+<pre><code class="language-text">List the localipdf tools available through MCP.
+</code></pre>
+<p>Then use two disposable PDFs and an existing output folder:</p>
+<pre><code class="language-text">Use localipdf to merge &quot;/full/path/first.pdf&quot; and
+&quot;/full/path/second.pdf&quot; in that order.
+Save the result in &quot;/full/path/results&quot;.
+</code></pre>
+<p>Open the saved file and check its page count and order. Listing the tools checks the connection. Merging the sample PDFs also checks the browser, file access and saving.</p>
+<p>The <a href="/tools/merge-pdf/">Merge PDF tool</a> offers the same workflow in the browser if you prefer to choose files yourself.</p>
+<h2>Choose options before running a tool</h2>
+<p>Ask Codex to show the available options for the selected tool and file before changing an unfamiliar setting. The connection reads the controls shown by that tool.</p>
+<p>You can ask to split a PDF, extract selected pages, convert a document or compress a copy. Give the full file paths and the folder where you want the result saved. The server preserves existing files by choosing a new name when necessary. Check the returned path rather than assuming it replaced an earlier output.</p>
+<p>Some operations require your confirmation. Review the action and any warning before agreeing, especially when changing signatures, security restrictions or visible content.</p>
+<h2>Know which workflows need the website</h2>
+<p>The tool catalog marks workflows that cannot run through this connection. Signing, drag-based page organization, reading, visual comparison, overlay templates, camera scanning and the workflow builder need the website&#39;s interface. The downloadable MCP package also excludes OCR recognition assets.</p>
+<p>Use the website for those workflows. They appear in the catalog with an explanation of why they cannot run through the connection.</p>
+<h2>Understand what stays local</h2>
+<p>The server processes PDFs in a separate temporary browser profile on your computer. It does not reuse your personal browser tabs or browsing profile.</p>
+<p>However, Codex receives your prompts and the tool&#39;s responses. These can contain paths, messages and, for some operations, extracted document text. Your AI provider can therefore receive some document information even though the PDF is processed locally. Review your client&#39;s data settings before asking it to extract sensitive text.</p>
+<p>Read the <a href="/privacy/">localipdf privacy policy</a> for the website&#39;s practices. Your AI client&#39;s policies apply separately.</p>
+<h2>Update or troubleshoot the connection</h2>
+<p>To update, extract a fresh download into a new folder, change the configured server path and reload the connection. Test a disposable file before deleting the previous package.</p>
+<table>
+<thead>
+<tr>
+<th>What you see</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Node or the server cannot be found</td>
+<td>Use full executable and server paths; confirm the folder was extracted</td>
+</tr>
+<tr>
+<td>A missing file or blank tool page</td>
+<td>Keep the complete package together, including <code>site</code> and <code>tools.json</code></td>
+</tr>
+<tr>
+<td>No supported browser is found</td>
+<td>Install a supported browser, or set <code>LOCALIPDF_BROWSER</code> in the server environment to its executable</td>
+</tr>
+<tr>
+<td>A conversion times out</td>
+<td>Check the timeout setting and try fewer pages or a smaller file</td>
+</tr>
+<tr>
+<td>The tool is listed but cannot run here</td>
+<td>Read its limitation and use the website&#39;s interface</td>
+</tr>
+</tbody></table>
+<h2>Questions</h2>
+<h3>Do I need a separate PDF engine for Codex and Claude?</h3>
+<p>No. Both integrations use the same localipdf server and bundled website tools. Each client has its own connection settings.</p>
+<h3>Can I install this ZIP as a hosted ChatGPT web connector?</h3>
+<p>No. This package uses local STDIO and launches a local browser. ChatGPT web needs a remote MCP connection or a supported tunnel, as described in <a href="https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt">OpenAI&#39;s ChatGPT connection guide</a>. That requires a separate connection and access design; it is not part of this setup.</p>
+<h3>Will the connection change my original PDF?</h3>
+<p>Results are saved as new files. If an output name already exists, the server chooses another name. Review the saved copy before using or sharing it.</p>
+<h3>Why should I test with disposable PDFs first?</h3>
+<p>It confirms that the configured path, browser and output folder work together. It also lets you see what information the assistant receives before using a private document.</p>
+</div></main><footer><p><a href="/glossary/">Glossary</a> · <a href="/guides/">Guides</a> · <a href="/licenses/">Open-source licences</a> · <a href="/about/">About</a> · <a href="/terms/">Terms</a> · <a href="/faq/">FAQ</a> · <a href="/claude/">Use in Claude &amp; Codex</a> · <a href="/verify/">Verify it yourself</a></p><p><a href="/">All PDF tools</a> · <a href="/privacy/">Privacy policy</a> · <a href="mailto:support@localipdf.com">support@localipdf.com</a></p><nav aria-label="PDF tools"><p><a href="/tools/compress-pdf/">Compress PDF</a> · <a href="/tools/merge-pdf/">Merge PDF</a> · <a href="/tools/split-pdf/">Split PDF</a> · <a href="/tools/jpg-to-pdf/">Images to PDF</a> · <a href="/tools/png-to-pdf/">PNG to PDF</a> · <a href="/tools/pdf-to-jpg/">PDF to images</a> · <a href="/tools/pdf-to-png/">PDF to PNG</a> · <a href="/tools/pdf-to-word/">PDF to Word</a> · <a href="/tools/word-to-pdf/">Word to PDF</a> · <a href="/tools/pdf-to-excel/">PDF to Excel</a> · <a href="/tools/unlock-pdf/">Unlock PDF</a> · <a href="/tools/protect-pdf/">Protect PDF</a> · <a href="/tools/sign-pdf/">Sign PDF</a> · <a href="/tools/edit-pdf/">Edit PDF</a> · <a href="/tools/ocr-pdf/">OCR PDF</a> · <a href="/tools/scan-to-pdf/">Scan to PDF</a> · <a href="/tools/remove-pages/">Remove pages</a> · <a href="/tools/rotate-pdf/">Rotate PDF</a> · <a href="/tools/compress-pdf-to-200kb/">Compress PDF to 200 KB</a></p></nav></footer></div></body></html>

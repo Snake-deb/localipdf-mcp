@@ -1,0 +1,1 @@
+var e={forms:`Form fields`,annotations:`Comments and marks`,signatures:`Signatures and stamps`};export{e as t};

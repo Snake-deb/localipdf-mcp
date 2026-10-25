@@ -1,0 +1,15 @@
+{
+  "name": "localipdf",
+  "description": "The localipdf PDF tools as a Claude Code plugin. PDFs are processed on your own computer.",
+  "owner": {
+    "name": "localipdf",
+    "email": "support@localipdf.com"
+  },
+  "plugins": [
+    {
+      "name": "localipdf",
+      "source": "./",
+      "description": "Compress, merge, split, convert, protect and redact PDFs on your own computer."
+    }
+  ]
+}

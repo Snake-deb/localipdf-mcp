@@ -1,0 +1,1 @@
+import{a as e}from"./digital-signatures-Bj2ks_qy.js";import"./geometry-j_iUqoWB.js";e.of;function t(e){let t=e.rotation*Math.PI/180,n=Math.abs(e.width*Math.cos(t))+Math.abs(e.height*Math.sin(t)),r=Math.abs(e.width*Math.sin(t))+Math.abs(e.height*Math.cos(t));return{x:e.x+(e.width-n)/2,y:e.y+(e.height-r)/2,width:n,height:r}}export{t};

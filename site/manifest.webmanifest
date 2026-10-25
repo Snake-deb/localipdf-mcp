@@ -1,0 +1,47 @@
+{
+  "id": "/",
+  "name": "localipdf \u2014 Private PDF tools",
+  "short_name": "localipdf",
+  "description": "PDF tools that work on your device, without uploading documents.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#016a71",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/brand/app-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/brand/app-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/brand/app-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/verify/install-wide.png",
+      "sizes": "1280x900",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "PDF tools on your device"
+    },
+    {
+      "src": "/verify/install-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Find a PDF tool"
+    }
+  ]
+}

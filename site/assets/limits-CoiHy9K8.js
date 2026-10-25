@@ -1,0 +1,1 @@
+var e=5e4;export{e as t};

@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#016a71"/><meta name="description" content="Make a scanned PDF searchable with OCR. Choose the right language, keep the page images, and check names, numbers and missing text before sharing."/><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.googletagmanager.com https://*.google-analytics.com; font-src 'self' blob: data:; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"/><link rel="manifest" href="/manifest.webmanifest"/><link rel="icon" href="/favicon.svg"/><title>How to make a scanned PDF searchable</title><!-- Google tag (gtag.js) --><script src="/google-analytics.js"></script>  <script type="module" crossorigin src="/assets/index-CWanKoBM.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-Dd_uD5pT.js">
+  <link rel="modulepreload" crossorigin href="/assets/limits-CoiHy9K8.js">
+  <link rel="modulepreload" crossorigin href="/assets/model-9qzk93DE.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-Du-X-U0l.css">
+<meta name="robots" content="index, follow"/><link rel="canonical" href="https://localipdf.com/guides/make-pdf-searchable/"/><meta property="og:url" content="https://localipdf.com/guides/make-pdf-searchable/"/><meta property="og:image" content="https://localipdf.com/brand/social-card.png"/><meta name="twitter:image" content="https://localipdf.com/brand/social-card.png"/><meta property="og:type" content="website"/><meta property="og:site_name" content="localipdf"/><meta property="og:locale" content="en_US"/><meta name="twitter:card" content="summary_large_image"/><meta property="og:title" content="How to make a scanned PDF searchable"/><meta property="og:description" content="Make a scanned PDF searchable with OCR. Choose the right language, keep the page images, and check names, numbers and missing text before sharing."/><meta name="twitter:title" content="How to make a scanned PDF searchable"/><meta name="twitter:description" content="Make a scanned PDF searchable with OCR. Choose the right language, keep the page images, and check names, numbers and missing text before sharing."/><meta property="og:image:alt" content="localipdf — Free PDF tools. Your documents stay on your device."/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><script id="page-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to make a scanned PDF searchable","description":"Make a scanned PDF searchable with OCR. Choose the right language, keep the page images, and check names, numbers and missing text before sharing.","datePublished":"2026-10-22","mainEntityOfPage":"https://localipdf.com/guides/make-pdf-searchable/","inLanguage":"en","author":{"@type":"Organization","name":"localipdf","url":"https://localipdf.com/about/"},"publisher":{"@id":"https://localipdf.com/#organization"}}</script></head><body><div id="root"><main class="container prose"><nav aria-label="Breadcrumb"><a href="/">PDF tools</a> / <a href="/guides/">PDF guides</a></nav><h1>How to make a scanned PDF searchable</h1><p>Published <time datetime="2026-10-22">2026-10-22</time></p><div class="article-body"><p>To make a scanned PDF searchable, run optical character recognition (OCR) and save a Searchable PDF. OCR adds a text layer so you can find and copy words while keeping the page images. Choose the correct languages, then check a few searches and important numbers against the original before sharing.</p>
+<h2>Check whether the PDF needs OCR</h2>
+<p>Open the original and try selecting a short sentence. Copy it into a plain text editor and compare the words. A scan may look sharp on screen while containing only pictures of the text. If selection and copying already work, you may not need OCR.</p>
+<p>Some documents mix scanned pages with pages that already contain text. Note which pages need recognition. Keep the original file separately and work from the clearest copy available. A small, heavily compressed scan can leave too little detail to distinguish a decimal point from a speck on the page.</p>
+<h2>Create a searchable copy step by step</h2>
+<ol>
+<li>Open <a href="/tools/ocr-pdf/">OCR PDF</a> and choose the scanned PDF. The document is processed on your device.</li>
+<li>Under Save as, choose Searchable PDF. This keeps a PDF for reading and searching; a text or Word export serves a different purpose.</li>
+<li>Set Pages (leave blank for all). For a long scan, try a representative page first. A range such as <code>2-4</code> recognizes those pages; other pages remain in the PDF without new recognition.</li>
+<li>Choose Text languages to match the printed words. English is selected initially. If the document also contains Tamil, for example, select Tamil as well. Avoid adding languages that do not appear on the pages.</li>
+<li>Open More options if recognition data needs preparing, then select Prepare languages. The first preparation needs an internet connection to download the chosen data. Your PDF is not sent with that download.</li>
+<li>Select Recognize text and wait for the result. Keep the tab open. If the browser runs short of memory, try fewer pages rather than repeatedly starting the entire document.</li>
+<li>Download the result. In your PDF reader, search for a distinctive word from a processed page, then try copying a sentence. Check the copied wording as well as the visible page.</li>
+</ol>
+<p>The page picture can still look correct when the hidden text contains a mistake. Review the text that search and copy actually use, especially before relying on amounts, dates or reference numbers.</p>
+<h2>Test the result with a small checklist</h2>
+<p>For an invented invoice, suppose the image says <code>Invoice 001234</code> and <code>Total 1234.56</code>. Search for the invoice heading, copy the identifier and amount, and compare each character with the image. A match for the heading does not prove that the amount was read correctly.</p>
+<p>Check the first and last processed pages, a dense paragraph, and any faint or rotated page. Watch for <code>0</code> versus <code>O</code>, <code>1</code> versus <code>I</code>, missing minus signs, decimal points and leading zeros. A confidence indicator can help you decide where to look, but it cannot certify a particular number.</p>
+<p>To check several pages together, open the saved copy in <a href="/tools/pdf-to-text/">PDF to Text</a> and export its wording. Look for missing paragraphs and an unexpected reading order, especially on pages with columns. Compare the extracted text with the source PDF.</p>
+<p>W3C&#39;s <a href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF7">guidance on text in scanned PDFs</a> also describes checking recognized text and reading order. Searchable text alone does not establish that a document is fully accessible; tags and reading order need their own review.</p>
+<h2>Common situations and what to try</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>What it can mean</th>
+<th>Next step</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Search finds a word on one page but not another</td>
+<td>The second page may be outside the chosen range or poorly recognized</td>
+<td>Check Pages and test that page separately</td>
+</tr>
+<tr>
+<td>The page looks right, but copied numbers are wrong</td>
+<td>The picture and recognized text are different parts of the PDF</td>
+<td>Compare the text with the original and use a clearer scan if possible</td>
+</tr>
+<tr>
+<td>Words run together or appear out of order</td>
+<td>Columns, skew or a complex layout may affect recognition</td>
+<td>Review a small sample before processing the whole file</td>
+</tr>
+<tr>
+<td>Recognition data is not ready</td>
+<td>The selected language data has not finished downloading</td>
+<td>Use Prepare languages with an internet connection</td>
+</tr>
+<tr>
+<td>The file is larger after OCR</td>
+<td>The searchable copy includes additional text information</td>
+<td>Keep both copies and review any later compressed result again</td>
+</tr>
+</tbody></table>
+<p>If a scan is blurred or badly faded, try a clearer scan before running recognition again. Handwriting and stamps need particular care. OCR cannot recover missing print. If the scan cuts off a line, rescan the complete page.</p>
+<h2>Questions</h2>
+<h3>Does adding searchable text let me rewrite the printed page?</h3>
+<p>No. A searchable copy adds text for finding and copying words; it does not turn the printed page into an editable page layout. Choose an editable-text output if you need to revise wording, and compare that export with the original.</p>
+<h3>What happens to pages outside my OCR range?</h3>
+<p>They remain in the searchable PDF. The chosen range controls which pages receive recognition, so a scanned page outside that range may still be impossible to search. Include it in a later run if you need its words recognized.</p>
+<h3>Can I keep an existing digital signature when I add OCR text?</h3>
+<p>Keep the signed original. OCR PDF requires an unsigned copy when saving a searchable PDF because rewriting the document would invalidate the original cryptographic signature. Do not present an edited copy as the signed original.</p>
+<h3>Will OCR make every word in a scan searchable correctly?</h3>
+<p>No. Small print, unusual names, faded characters and complex layouts can produce missing or incorrect text. Test searches and copied passages on representative pages, and check important values against the image before sharing or using the result.</p>
+</div></main><footer><p><a href="/glossary/">Glossary</a> · <a href="/guides/">Guides</a> · <a href="/licenses/">Open-source licences</a> · <a href="/about/">About</a> · <a href="/terms/">Terms</a> · <a href="/faq/">FAQ</a> · <a href="/claude/">Use in Claude &amp; Codex</a> · <a href="/verify/">Verify it yourself</a></p><p><a href="/">All PDF tools</a> · <a href="/privacy/">Privacy policy</a> · <a href="mailto:support@localipdf.com">support@localipdf.com</a></p><nav aria-label="PDF tools"><p><a href="/tools/compress-pdf/">Compress PDF</a> · <a href="/tools/merge-pdf/">Merge PDF</a> · <a href="/tools/split-pdf/">Split PDF</a> · <a href="/tools/jpg-to-pdf/">Images to PDF</a> · <a href="/tools/png-to-pdf/">PNG to PDF</a> · <a href="/tools/pdf-to-jpg/">PDF to images</a> · <a href="/tools/pdf-to-png/">PDF to PNG</a> · <a href="/tools/pdf-to-word/">PDF to Word</a> · <a href="/tools/word-to-pdf/">Word to PDF</a> · <a href="/tools/pdf-to-excel/">PDF to Excel</a> · <a href="/tools/unlock-pdf/">Unlock PDF</a> · <a href="/tools/protect-pdf/">Protect PDF</a> · <a href="/tools/sign-pdf/">Sign PDF</a> · <a href="/tools/edit-pdf/">Edit PDF</a> · <a href="/tools/ocr-pdf/">OCR PDF</a> · <a href="/tools/scan-to-pdf/">Scan to PDF</a> · <a href="/tools/remove-pages/">Remove pages</a> · <a href="/tools/rotate-pdf/">Rotate PDF</a> · <a href="/tools/compress-pdf-to-200kb/">Compress PDF to 200 KB</a></p></nav></footer></div></body></html>

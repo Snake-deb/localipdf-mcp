@@ -1,0 +1,64 @@
+{
+  "manifest_version": "0.2",
+  "name": "localipdf",
+  "display_name": "localipdf MCP — Claude & Codex",
+  "version": "0.1.1",
+  "description": "Use localipdf PDF tools in Claude or Codex. Process PDFs on your computer and save results as new files.",
+  "long_description": "Runs the localipdf PDF tools in a separate local browser profile. Claude and Codex can list tools, read help, inspect options and run supported operations on files you name. Results are saved as new files. PDF processing stays on your computer, but the assistant receives your prompts and tool responses, which may include file paths and extracted text. Requires a supported Chrome, Edge, Chromium or Brave installation. See the setup guide for limitations.",
+  "author": {
+    "name": "localipdf",
+    "email": "support@localipdf.com",
+    "url": "https://localipdf.com"
+  },
+  "homepage": "https://localipdf.com",
+  "server": {
+    "type": "node",
+    "entry_point": "server.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server.mjs"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "list_pdf_tools",
+      "description": "List the PDF tools and which ones can run here."
+    },
+    {
+      "name": "pdf_tool_help",
+      "description": "Read a tool's help, options and limits."
+    },
+    {
+      "name": "show_pdf_tool_options",
+      "description": "List a tool's options for given files, by their on-screen names."
+    },
+    {
+      "name": "run_pdf_tool",
+      "description": "Run a tool on files on this computer and save the results."
+    }
+  ],
+  "keywords": [
+    "pdf",
+    "compress",
+    "merge",
+    "split",
+    "convert",
+    "private",
+    "offline"
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=20.0.0"
+    }
+  },
+  "privacy_policies": [
+    "https://localipdf.com/privacy/"
+  ]
+}

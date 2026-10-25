@@ -26,7 +26,16 @@ Full policy: https://localipdf.com/privacy/
 
 ## Install
 
-Download the latest files from [Releases](../../releases), or from [localipdf.com/claude](https://localipdf.com/claude/).
+**As a Claude Code plugin:** run these two commands in Claude Code:
+
+```sh
+/plugin marketplace add Snake-deb/localipdf-mcp
+/plugin install localipdf@localipdf
+```
+
+The plugin starts the server with `node ${CLAUDE_PLUGIN_ROOT}/server.mjs`, so Node.js must be installed.
+
+**From the release files:** download them from [Releases](../../releases), or from [localipdf.com/claude](https://localipdf.com/claude/).
 
 **Claude Desktop:** open `localipdf.mcpb` and confirm. Claude Desktop may show a warning because the extension is not in its directory.
 
@@ -61,6 +70,18 @@ The server offers four MCP operations:
 
 Most localipdf tools run here, including Compress PDF, Merge PDF, Split PDF, Protect PDF, Unlock PDF, PDF to Word, Annotate PDF, Edit PDF and Redact PDF. Tools that need hands-on work, such as Sign PDF and Organize PDF, stay on the website; `list_pdf_tools` marks them with `runs_here: false`. Text recognition (OCR) is not included.
 
+## What this plugin runs
+
+Everything the plugin does happens on your computer:
+
+1. Claude starts `node server.mjs` from this folder. It needs no npm install and downloads nothing.
+2. The server reads `site/` from this folder and serves it on 127.0.0.1, on a free port chosen when it starts.
+3. It opens your installed Chrome, Edge, Chromium or Brave with a new temporary profile and the flag `--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1`, which blocks every hostname except 127.0.0.1.
+4. It reads only the files you name, saves results as new files in the folder you name, and never overwrites a file.
+5. When it closes, it deletes the temporary profile and download folders.
+
+It makes no requests to localipdf.com or any other remote server. The code in `site/` is the built localipdf.com website, so it is minified; `server.mjs` and `driver.js` are plain JavaScript you can read.
+
 ## Check the download
 
 Compare the file you downloaded with `SHA256SUMS` in the release:
@@ -75,7 +96,7 @@ The package does not update itself. Download the new release, test it on a spare
 
 ## Licence
 
-The package is free to use. See [LICENSE](LICENSE). It includes open-source components under their own licences; their full texts are in [licenses/](licenses/) and inside the package.
+The package is free to use. See [LICENSE](LICENSE). It includes open-source components under their own licences; their full texts are in [site/licenses/](site/licenses/).
 
 ## Support
 
