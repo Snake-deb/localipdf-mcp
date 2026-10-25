@@ -8,6 +8,16 @@ The server serves its bundled copy of the localipdf tools on 127.0.0.1 and opens
 
 Your AI client still receives what you type and what the tools report: file paths, status messages and, for some tools such as Edit PDF, document text. Its own data policy applies to that information.
 
+## Privacy Policy
+
+Full policy: https://localipdf.com/privacy/
+
+- **Data collection:** the add-on collects nothing. It does not send information to localipdf or anyone else, and analytics do not run inside it.
+- **Usage and storage:** your PDFs are processed in the temporary browser profile described above, and results are saved as new files next to your originals.
+- **Third-party sharing:** none by the add-on. Your AI client receives your prompts and the tool responses, as described above.
+- **Retention:** the temporary browser profile and download folders are deleted when the add-on closes.
+- **Contact:** privacy@localipdf.com
+
 ## Requirements
 
 - Node.js 20 or newer
