@@ -10,5 +10,18 @@
   },
   "homepage": "https://localipdf.com/claude/",
   "repository": "https://github.com/Snake-deb/localipdf-mcp",
-  "keywords": ["pdf", "compress", "merge", "split", "convert", "redact", "offline"]
+  "keywords": [
+    "pdf",
+    "compress",
+    "merge",
+    "split",
+    "convert",
+    "redact",
+    "offline"
+  ],
+  "icon": "./.claude-plugin/icon.png",
+  "documentationUrl": "https://localipdf.com/claude/",
+  "supportUrl": "https://localipdf.com/about/",
+  "privacyPolicyUrl": "https://localipdf.com/privacy/",
+  "termsOfServiceUrl": "https://localipdf.com/terms/"
 }

@@ -33,7 +33,7 @@ Full policy: https://localipdf.com/privacy/
 /plugin install localipdf@localipdf
 ```
 
-The plugin starts the server with `node ${CLAUDE_PLUGIN_ROOT}/server.mjs`, so Node.js must be installed.
+The plugin starts the server with `node ${CLAUDE_PLUGIN_ROOT}/server.mjs`, so Node.js must be installed. It is a local server, so it works in Claude Code and Cowork on your computer, not in claude.ai in a web browser.
 
 **From the release files:** download them from [Releases](../../releases), or from [localipdf.com/claude](https://localipdf.com/claude/).
 
@@ -81,6 +81,12 @@ Everything the plugin does happens on your computer:
 5. When it closes, it deletes the temporary profile and download folders.
 
 It makes no requests to localipdf.com or any other remote server. The code in `site/` is the built localipdf.com website, so it is minified; `server.mjs` and `driver.js` are plain JavaScript you can read.
+
+### Notes for reviewers
+
+- **Environment variables read:** `LOCALIPDF_BROWSER` (an optional path to the browser, set by the person) and, on Windows, `LOCALAPPDATA`, `PROGRAMFILES` and `PROGRAMFILES(X86)`, only to find where Chrome or Edge is installed. None of them is a credential, and none is sent anywhere.
+- **Binary files in `site/`:** WebAssembly builds of the engines the website uses (PDF.js image and colour decoders and its form-script sandbox, MozJPEG, QPDF as `qpdf-core.bin`, and an image resizer), fonts, CMap files for PDF text, and `site/licenses/eigen-source/`, the Eigen source archive kept with the licence notices. The browser profile runs the WebAssembly; nothing runs the archive.
+- **Minified code:** `site/` is the built localipdf.com website, the same files served at https://localipdf.com. `server.mjs` and `driver.js` are plain JavaScript.
 
 ## Check the download
 
